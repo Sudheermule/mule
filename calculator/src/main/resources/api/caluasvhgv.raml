@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: caluasvhgv
+version: 1
+protocols: [HTTP]
+mediaType: 
+- application/json
+traits:
+  -que: !include traits/trait.raml
+/addition:
+  get:
+    is: [-que]
+    responses:
+      200:
+        body:
+            example: !include examples/addition.json        
+/sudstraction:
+  put:
+    is: [-que]
+    responses:
+      200:
+        body:
+            example: !include examples/substraction.json          
